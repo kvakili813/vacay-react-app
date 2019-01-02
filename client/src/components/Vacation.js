@@ -11,3 +11,16 @@ export default (props) => {
           <img src={`${vacation.image_url}`} alt={vacation.name} className='grid-photo' />
         </Link>
       </div>
+
+      <figcaption>
+        <p>{restaurant.name}</p>
+        <div className='control-buttons'>
+          <Link className='button' to={`/restaurants/${restaurant.place_id}`}>
+            <span className='comment-count'>
+              <span className='speech-bubble' />
+              <span> {comments[restaurant.place_id] ? comments[restaurant.place_id].length : 0 }</span>
+            </span>
+          </Link>
+        </div>
+      </figcaption>
+    </div>
