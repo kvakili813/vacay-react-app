@@ -14,6 +14,12 @@ import {persistStore, autoRehydrate} from 'redux-persist'
 import createHistory from 'history/createBrowserHistory'
 import thunk from 'redux-thunk'
 
+// Components
+import App from './components/App'
+import Home from './components/Home'
+import RestaurantList from './components/RestaurantList'
+import Single from './components/Single'
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
