@@ -25,3 +25,15 @@ class VacationList extends Component {
     }
   }
   
+  function mapStateToProps (state) {
+    return {
+      places: state.places,
+      comments: state.comments
+    }
+  }
+  
+  function mapDispatchToProps (dispatch) {
+    return { actionCreators: bindActionCreators(actionCreators, dispatch) }
+  }
+  
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(VacationList))
