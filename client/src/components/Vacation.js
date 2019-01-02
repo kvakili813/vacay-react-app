@@ -24,3 +24,13 @@ export default (props) => {
         </div>
       </figcaption>
     </div>
+    } else {
+        show = <p>Loading...</p>
+      }
+      console.log(restaurant)
+      return (
+        <figure className='grid-figure'>
+          {show}
+        </figure>
+      )
+    }
