@@ -13,12 +13,12 @@ export default (props) => {
       </div>
 
       <figcaption>
-        <p>{restaurant.name}</p>
+        <p>{vacation.name}</p>
         <div className='control-buttons'>
-          <Link className='button' to={`/restaurants/${restaurant.place_id}`}>
+          <Link className='button' to={`/vacations/${vacation.place_id}`}>
             <span className='comment-count'>
               <span className='speech-bubble' />
-              <span> {comments[restaurant.place_id] ? comments[restaurant.place_id].length : 0 }</span>
+              <span> {comments[vacation.place_id] ? comments[vacation.place_id].length : 0 }</span>
             </span>
           </Link>
         </div>
@@ -27,7 +27,7 @@ export default (props) => {
     } else {
         show = <p>Loading...</p>
       }
-      console.log(restaurant)
+      console.log(vacation)
       return (
         <figure className='grid-figure'>
           {show}
