@@ -17,7 +17,7 @@ import thunk from 'redux-thunk'
 // Components
 import App from './components/App'
 import Home from './components/Home'
-import RestaurantList from './components/RestaurantList'
+import VacationList from './components/VacationList'
 import Single from './components/Single'
 
 // Reducer
@@ -38,11 +38,24 @@ const store = createStore(
     )
   )
   
+  render(
+    <Provider store={store}>
+      <Router history={history}>
+        <App>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/locations' component={VacationList} />
+          <Route exact path='/locations/:id' component={Single} />
+        </App>
+      </Router>
+    </Provider>,
+    document.getElementById('root')
+  )
+  
+  persistStore(store)
 
+// ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// // If you want your app to work offline and load faster, you can change
+// // unregister() to register() below. Note this comes with some pitfalls.
+// // Learn more about service workers: http://bit.ly/CRA-PWA
+// serviceWorker.unregister();
