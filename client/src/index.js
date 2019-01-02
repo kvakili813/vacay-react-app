@@ -20,6 +20,16 @@ import Home from './components/Home'
 import RestaurantList from './components/RestaurantList'
 import Single from './components/Single'
 
+// Reducer
+import rootReducer from './reducers/index'
+
+// CSS
+import 'normalize.css'
+import './styles/css.css'
+
+const history = createHistory()
+
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
