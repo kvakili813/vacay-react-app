@@ -18,6 +18,19 @@ class App extends Component {
   }
 }
 
+function mapStateToProps (state) {
+  return {
+    restaurants: state.restaurants,
+    comments: state.comments
+  }
+}
+
+function mapDispatchToProps (dispatch) {
+  return { actionCreators: bindActionCreators(actionCreators, dispatch) }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+
 // class App extends Component {
 //   render() {
 //     return (
