@@ -13,7 +13,7 @@ function vacationComments (state = [], action) {
     if (typeof action.id !== 'undefined') {
       return {
         ...state,
-        [action.id]: restaurantComments(state[action.id], action)
+        [action.id]: vacationComments(state[action.id], action)
       }
     }
     return state
