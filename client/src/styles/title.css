@@ -1,0 +1,13 @@
+@import 'fonts.css';
+
+h1.title {
+    font: bold 8em/1 'Amatic SC', cursive;
+    text-align: center;
+    background-color: orange;
+    color: black;
+    border-radius: 25px;
+}
+
+a {
+    text-decoration: none;
+}
