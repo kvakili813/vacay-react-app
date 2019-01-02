@@ -29,6 +29,16 @@ import './styles/css.css'
 
 const history = createHistory()
 
+const store = createStore(
+    rootReducer,
+    compose(
+      applyMiddleware(thunk),
+      autoRehydrate(),
+      window.devToolsExtension ? window.devToolsExtension() : f => f
+    )
+  )
+  
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
