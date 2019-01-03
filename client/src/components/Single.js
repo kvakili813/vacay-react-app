@@ -21,3 +21,16 @@ class Single extends Component {
             <vacation i={i} vacation={vacation} {...this.props} />
             <Comments vacationComments={vacationComments} {...this.props} />
           </div>
+          } else {
+            single = <div className='single'>
+              <p>Loading...</p>
+            </div>
+          }
+          return (
+            <div>
+              {single}
+            </div>
+          )
+        }
+      }
+      
