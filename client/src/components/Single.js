@@ -33,4 +33,18 @@ class Single extends Component {
           )
         }
       }
+
+      function mapStateToProps (state) {
+        return {
+          places: state.places,
+          comments: state.comments
+        }
+      }
+      
+      function mapDispatchToProps (dispatch) {
+        return bindActionCreators(actionCreators, dispatch)
+      }
+      
+      export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Single))
+      
       
