@@ -24,4 +24,20 @@ function removeComment (id, i) {
     return (dispatch) => {
       dispatch({type: 'FETCH_PLACES'})
       return fetch('api/places')
-  
+      .then(response => {
+        response.json()
+        .then(json => {
+          dispatch({type: 'RECEIVED_PLACES', payload: json})
+        })
+      })
+      .catch((err) => {
+        dispatch({type: 'FETCH_PLACES_ERROR', payload: err})
+      })
+  }
+}
+
+export {
+  addComment,
+  removeComment,
+  fetchPlaces
+}
