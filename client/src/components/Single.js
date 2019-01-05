@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import * as actionCreators from '../actions/actionCreators'
 
 // Components
-import Restaurant from './Vacation'
+import Vacation from './Vacation'
 import Comments from './Comments'
 
 class Single extends Component {
@@ -18,7 +18,7 @@ class Single extends Component {
         const vacationComments = this.props.comments[id] || []
         single =
           <div className='single'>
-            <vacation i={i} vacation={vacation} {...this.props} />
+            <Vacation i={i} vacation={vacation} {...this.props} />
             <Comments vacationComments={vacationComments} {...this.props} />
           </div>
           } else {

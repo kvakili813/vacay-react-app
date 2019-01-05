@@ -7,7 +7,7 @@ export default function places (state = [], action) {
       case 'RECEIVED_PLACES':
         return {
           ...state,
-          restaurants: action.payload
+          vacations: action.payload
         }
       default:
         return state

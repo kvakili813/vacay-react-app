@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import * as actionCreators from '../actions/actionCreators'
 
-import vacation from './vacation'
+import Vacation from './Vacation'
 
 class VacationList extends Component {
     render () {
@@ -13,7 +13,7 @@ class VacationList extends Component {
       console.log(vacations)
       if (vacations) {
         list =
-          vacations.map((r, i) => <vacation {...this.props} key={i} i={r.id} vacation={r} />)
+          vacations.map((r, i) => <Vacation {...this.props} key={i} i={r.id} vacation={r} />)
       } else {
         list = <p>Loading...</p>
       }

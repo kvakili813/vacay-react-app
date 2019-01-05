@@ -20,7 +20,7 @@ class App extends Component {
 
 function mapStateToProps (state) {
   return {
-    restaurants: state.restaurants,
+    vacations: state.vacations,
     comments: state.comments
   }
 }

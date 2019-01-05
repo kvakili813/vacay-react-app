@@ -1,0 +1,33 @@
+{
+  "name": "vacay",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.4.0-beta.6",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvakili813/vacay-react-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvakili813/vacay-react-app/issues"
+  },
+  "homepage": "https://github.com/kvakili813/vacay-react-app#readme"
+}

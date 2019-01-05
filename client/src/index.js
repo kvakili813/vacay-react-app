@@ -8,10 +8,9 @@
 import React from 'react'
 import { createStore, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import { Router, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { render } from 'react-dom'
-import {persistStore, autoRehydrate} from 'redux-persist'
-import createHistory from 'history/createBrowserHistory'
+// import {persistStore, autoRehydrate} from 'redux-persist'
 import thunk from 'redux-thunk'
 
 // Components
@@ -24,34 +23,32 @@ import Single from './components/Single'
 import rootReducer from './reducers/index'
 
 // CSS
-import 'normalize.css'
 import './styles/css.css'
 
-const history = createHistory()
 
 const store = createStore(
     rootReducer,
     compose(
       applyMiddleware(thunk),
-      autoRehydrate(),
+      // autoRehydrate(),
       window.devToolsExtension ? window.devToolsExtension() : f => f
     )
   )
   
   render(
     <Provider store={store}>
-      <Router history={history}>
+    <BrowserRouter>
         <App>
           <Route exact path='/' component={Home} />
-          <Route exact path='/locations' component={VacationList} />
-          <Route exact path='/locations/:id' component={Single} />
+          <Route exact path='/vacations' component={VacationList} />
+          <Route exact path='/vacations/:id' component={Single} />
         </App>
-      </Router>
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
   )
   
-  persistStore(store)
+  // persistStore(store)
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
