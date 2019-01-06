@@ -17,7 +17,7 @@ import thunk from 'redux-thunk'
 import App from './components/App'
 import Home from './components/Home'
 import VacationList from './components/VacationList'
-import Single from './components/Single'
+import Single from './containers/Single'
 
 // Reducer
 import rootReducer from './reducers/index'

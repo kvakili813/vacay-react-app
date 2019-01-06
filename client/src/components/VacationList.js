@@ -10,6 +10,7 @@ class VacationList extends Component {
     render () {
       let list
       const { vacations } = this.props.places
+      debugger
       console.log(vacations)
       if (vacations) {
         list =
