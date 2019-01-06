@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import * as actionCreators from '../actions/actionCreators'
 
-import Vacation from './Vacation'
+import Vacation from '../components/Vacation'
 
 class VacationList extends Component {
     render () {

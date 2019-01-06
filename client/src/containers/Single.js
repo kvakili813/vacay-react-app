@@ -6,8 +6,8 @@ import * as actionCreators from '../actions/actionCreators'
 
 // Components
 import Vacation from '../components/Vacation'
-import Comments from './Comments'
-const Single = ({places, match, comments}) => {
+import Comments from '../components/Comments'
+const Single = ({places, match, comments, addComment}) => {
   if (places.vacations) {
     const { id } = match.params
     const i = places.vacations.findIndex((r) => r.place_id === id)
@@ -17,7 +17,8 @@ const Single = ({places, match, comments}) => {
       <div>
 <div className='single'>
             <Vacation comments={comments} vacation={vacation} />
-            <Comments vacationComments={vacationComments} />
+            <Comments vacationComments={vacationComments} addComment={addComment}/>
+            
           </div>    </div>
     )
   } else {
